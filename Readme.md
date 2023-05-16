@@ -1,4 +1,4 @@
-                              [ExpenseTrackr](nunusavi.github.io/index.html)
+[ExpenseTrackr](nunusavi.github.io/index.html)
 
 Introduction:
 ExpenseTracker is a web-based application designed to simplify expense management and help users maintain better control over their finances. It provides a user-friendly interface for tracking expenses, visualizing spending patterns, setting budgets, and exporting data for analysis and reporting purposes.
