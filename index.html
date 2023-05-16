@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
 </head>
 <body>
-    
+  <header>
+    <h1>Expense Tracker</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Expenses</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Add Expense</h2>
+      <form>
+        <label for="expenseName">Expense Name:</label>
+        <input type="text" id="expenseName" name="expenseName" required>
+
+        <label for="expenseAmount">Amount:</label>
+        <input type="number" id="expenseAmount" name="expenseAmount" required>
+
+        <label for="expenseDate">Date:</label>
+        <input type="date" id="expenseDate" name="expenseDate" required>
+
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Expense List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Expense Name</th>
+            <th>Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Expense 1</td>
+            <td>$100</td>
+            <td>2023-05-16</td>
+          </tr>
+          <tr>
+            <td>Expense 2</td>
+            <td>$50</td>
+            <td>2023-05-15</td>
+          </tr>
+          <!-- Add more rows dynamically with JavaScript -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Expense Tracker. All rights reserved.</p>
+  </footer>
 </body>
 </html>
