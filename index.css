@@ -95,28 +95,3 @@ body {
     background-color: #519c87;
   }
   
-  .status-report {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f5f5f5;
-  }
-  
-  .indicator {
-    display: inline-block;
-    padding: 5px 10px;
-    font-weight: bold;
-    border-radius: 3px;
-    margin-top: 10px;
-  }
-  
-  .saving {
-    color: #006400;
-    background-color: #c3f0c8;
-  }
-  
-  .losing {
-    color: #8b0000;
-    background-color: #f0c8c8;
-  }
-  
