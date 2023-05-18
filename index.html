@@ -12,94 +12,49 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="Report.html">Reports</a></li>
-        <li><a href="settings.html">Settings</a></li>
+        <li><a href="#">Expenses</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Add Expense</h2>
-      <form>
-        <label for="expenseName">Expense Name:</label>
-        <input type="text" id="expenseName" name="expenseName" required>
+    <div class="section-container">
+      <section class="section-box">
+        <h2>Add Expense</h2>
+        <!-- Expense form content -->
+      </section>
 
-        <label for="expenseAmount">Amount:</label>
-        <input type="number" id="expenseAmount" name="expenseAmount" required>
-
-        <label for="expenseDate">Date:</label>
-        <input type="date" id="expenseDate" name="expenseDate" required>
-
-        <button type="submit">Add</button>
-      </form>
-    </section>
+      <section class="section-box">
+        <h2>Add Income</h2>
+        <!-- Income form content -->
+      </section>
+    </div>
 
     <section>
       <h2>Expense List</h2>
       <table>
-        <thead>
-          <tr>
-            <th>Expense Name</th>
-            <th>Amount</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Expense 1</td>
-            <td>$100</td>
-            <td>2023-05-16</td>
-          </tr>
-          <tr>
-            <td>Expense 2</td>
-            <td>$50</td>
-            <td>2023-05-15</td>
-          </tr>
-        </tbody>
+        <!-- Expense list content -->
       </table>
-    </section>
-
-    <section>
-      <h2>Add Income</h2>
-      <form>
-        <label for="incomeName">Income Name:</label>
-        <input type="text" id="incomeName" name="incomeName" required>
-
-        <label for="incomeAmount">Amount:</label>
-        <input type="number" id="incomeAmount" name="incomeAmount" required>
-
-        <label for="incomeDate">Date:</label>
-        <input type="date" id="incomeDate" name="incomeDate" required>
-
-        <button type="submit">Add</button>
-      </form>
     </section>
 
     <section>
       <h2>Income List</h2>
       <table>
-        <thead>
-          <tr>
-            <th>Income Name</th>
-            <th>Amount</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Income 1</td>
-            <td>$500</td>
-            <td>2023-05-16</td>
-          </tr>
-          <tr>
-            <td>Income 2</td>
-            <td>$200</td>
-            <td>2023-05-15</td>
-          </tr>
-        </tbody>
+        <!-- Income list content -->
       </table>
     </section>
+
+    <div class="status-report">
+      <h3>Financial Status Report</h3>
+      <p>Total Expenses: $500</p>
+      <p>Total Income: $1000</p>
+      <div class="indicator losing">
+        Losing Money
+      </div>
+    </div>
   </main>
+  <script src="index.js"></script>
 </body>
 </html>
