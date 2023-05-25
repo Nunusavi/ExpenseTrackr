@@ -19,7 +19,7 @@
   </header>
 
   <main>
-    <section>
+    <section class="section-box section-container">
       <h2>Add Expense</h2>
       <form>
         <label for="expenseName">Expense Name:</label>
@@ -33,9 +33,9 @@
 
         <button type="submit">Add</button>
       </form>
-    </section>
+   
 
-    <section>
+    
       <h2>Expense List</h2>
       <table>
         <thead>
@@ -59,8 +59,10 @@
         </tbody>
       </table>
     </section>
+   
 
-    <section>
+
+    <section class="section-box section-container">
       <h2>Add Income</h2>
       <form>
         <label for="incomeName">Income Name:</label>
@@ -74,31 +76,52 @@
 
         <button type="submit">Add</button>
       </form>
-    </section>
+    
 
-    <section>
-      <h2>Income List</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Income Name</th>
-            <th>Amount</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Income 1</td>
-            <td>$500</td>
-            <td>2023-05-16</td>
-          </tr>
-          <tr>
-            <td>Income 2</td>
-            <td>$200</td>
-            <td>2023-05-15</td>
-          </tr>
-        </tbody>
-      </table>
+      <Div>
+        <h2>Income List</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Income Name</th>
+                <th>Amount</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Income 1</td>
+                <td>$500</td>
+                <td>2023-05-16</td>
+              </tr>
+              <tr>
+                <td>Income 2</td>
+                <td>$200</td>
+                <td>2023-05-15</td>
+              </tr>
+            </tbody>
+          </table>
+      </Div>
+    </section> 
+    <section class="section-box section-container">
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Income</th>
+              <th>Expense</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>$700</td>
+              <td>$150</td>
+              <td>$550</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 </body>

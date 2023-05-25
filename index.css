@@ -34,7 +34,7 @@ body {
   
   main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 20px;
   }
   
@@ -94,4 +94,4 @@ body {
   button:hover {
     background-color: #519c87;
   }
-  
+ 
