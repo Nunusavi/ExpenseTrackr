@@ -1,5 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f1f1f1;
@@ -80,6 +82,7 @@ body {
   th {
     background-color: #65c3ad;
     color: #fff;
+    
   }
   
   button {
@@ -94,4 +97,27 @@ body {
   button:hover {
     background-color: #519c87;
   }
- 
+  .report-container {
+    position: relative;
+    bottom: 40%;
+    padding-right: 20px;
+  }
+  .report-container h2 {
+    position: relative;
+    left: 40%;
+  }
+ @media screen and (max-width: 500px) {
+    main {
+      flex-direction: column;
+    }
+    .section-container {
+      flex-direction: column;
+    }
+  /*let the sections have space between them */
+    .section-container {
+      gap: 0;
+    }
+    .section-box {
+      margin-bottom: 20px;
+    }
+ }
