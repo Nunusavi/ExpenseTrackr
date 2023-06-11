@@ -34,6 +34,7 @@
       <div class="report-container">
         <div class="chart">
           <!-- Chart representation of expense data -->
+          <canvas id="expenseChart"></canvas>
         </div>
         <table>
           <thead>
@@ -72,6 +73,7 @@
       <div class="report-container">
         <div class="chart">
           <!-- Chart representation of income data -->
+          <canvas id="incomeChart"></canvas>
         </div>
         <table>
           <thead>
@@ -96,4 +98,94 @@
     </section>
   </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // make a chart in the chart canvas
+  var ctx = document.getElementById('expenseChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Food'],
+      datasets: [{
+        label: 'Expense',
+        data: [12, 19, 3, 5, 2],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.5)',
+          'rgba(54, 162, 235, 0.5)',
+          'rgba(255, 206, 86, 0.5)',
+          'rgba(75, 192, 192, 0.5)',
+          'rgba(153, 102, 255, 0.5)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Category'
+          }
+        }],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Amount'
+          },
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+  // make a income chart based on whats in the table in the chart canvas
+  var ctx = document.getElementById('incomeChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Salary',],
+      datasets: [{
+        label: 'Income',
+        data: [3000,],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.5)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Source'
+          }
+        }],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Amount'
+          },
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+  
+</script>
 </html>
