@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expense Tracker</title>
   <link rel="stylesheet" type="text/css" href="index.css">
+  <!-- link scss -->
+  <link rel="stylesheet" type="text/css" href="switch.scss">
 </head>
 <body>
   <header>
@@ -15,9 +17,10 @@
         <li><a href="Report.html">Reports</a></li>
         <li><a href="settings.html">Settings</a></li>
       </ul>
-    </nav>
+    </nav> 
   </header>
-
+  
+  
   <main>
     <section class="section-box section-container">
       <h2>Add Expense</h2>
@@ -146,7 +149,7 @@
     function addIncome(event) {
       event.preventDefault(); // Prevent form submission
       var incomeName = document.getElementById("incomeName").value;
-      var incomeAmount = document.getElementById("incomeAmount").value;
+      var incomeAmount = document.getElaementById("incomeAmount").value;
       var incomeDate = document.getElementById("incomeDate").value;
 
       // Create a new row in the income table
@@ -201,6 +204,7 @@
       expenseCell.innerHTML = "$" + expenseTotal;
       balanceCell.innerHTML = "$" + balance;
     }
+    // Switch code
   </script>
 </body>
 </html>

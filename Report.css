@@ -3,7 +3,7 @@ body {
     font-family: 'Abel', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1;
+    background-color: #4C6D7A;
   }
   
   header {
@@ -43,12 +43,16 @@ body {
   
   h2 {
     margin-top: 0;
+    text-align: center;
   }
   
   form {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    position: relative;
+    left: 30%;
+    right: 45%;
   }
   
   label {
