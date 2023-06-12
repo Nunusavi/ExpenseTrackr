@@ -122,89 +122,10 @@
     </section>
   </main>
 
-  <script>
-    // Function to add an expense
-    function addExpense(event) {
-      event.preventDefault(); // Prevent form submission
-      var expenseName = document.getElementById("expenseName").value;
-      var expenseAmount = document.getElementById("expenseAmount").value;
-      var expenseDate = document.getElementById("expenseDate").value;
+<script src="index.js"></script>
+<script>
+  // save the new inputed data to local storage
 
-      // Create a new row in the expense table
-      var expenseTable = document.getElementById("expenseTable").getElementsByTagName("tbody")[0];
-      var newRow = expenseTable.insertRow();
-      var nameCell = newRow.insertCell(0);
-      var amountCell = newRow.insertCell(1);
-      var dateCell = newRow.insertCell(2);
-
-      nameCell.innerHTML = expenseName;
-      amountCell.innerHTML = "$" + expenseAmount;
-      dateCell.innerHTML = expenseDate;
-
-      // Update the report table
-      updateReportTable();
-    }
-
-    // Function to add an income
-    function addIncome(event) {
-      event.preventDefault(); // Prevent form submission
-      var incomeName = document.getElementById("incomeName").value;
-      var incomeAmount = document.getElaementById("incomeAmount").value;
-      var incomeDate = document.getElementById("incomeDate").value;
-
-      // Create a new row in the income table
-      var incomeTable = document.getElementById("incomeTable").getElementsByTagName("tbody")[0];
-      var newRow = incomeTable.insertRow();
-      var nameCell = newRow.insertCell(0);
-      var amountCell = newRow.insertCell(1);
-      var dateCell = newRow.insertCell(2);
-
-      nameCell.innerHTML = incomeName;
-      amountCell.innerHTML = "$" + incomeAmount;
-      dateCell.innerHTML = incomeDate;
-
-      // Update the report table
-      updateReportTable();
-    }
-
-    // Function to update the report table
-    function updateReportTable() {
-      var incomeTotal = 0;
-      var expenseTotal = 0;
-
-      // Calculate the total income
-      var incomeTable = document.getElementById("incomeTable").getElementsByTagName("tbody")[0];
-      var incomeRows = incomeTable.getElementsByTagName("tr");
-      for (var i = 0; i < incomeRows.length; i++) {
-        var amountCell = incomeRows[i].getElementsByTagName("td")[1];
-        var amount = parseFloat(amountCell.innerHTML.substring(1));
-        incomeTotal += amount;
-      }
-
-      // Calculate the total expense
-      var expenseTable = document.getElementById("expenseTable").getElementsByTagName("tbody")[0];
-      var expenseRows = expenseTable.getElementsByTagName("tr");
-      for (var i = 0; i < expenseRows.length; i++) {
-        var amountCell = expenseRows[i].getElementsByTagName("td")[1];
-        var amount = parseFloat(amountCell.innerHTML.substring(1));
-        expenseTotal += amount;
-      }
-
-      // Calculate the balance
-      var balance = incomeTotal - expenseTotal;
-
-      // Update the report table
-      var reportTable = document.getElementById("reportTable").getElementsByTagName("tbody")[0];
-      var reportRow = reportTable.getElementsByTagName("tr")[0];
-      var incomeCell = reportRow.getElementsByTagName("td")[0];
-      var expenseCell = reportRow.getElementsByTagName("td")[1];
-      var balanceCell = reportRow.getElementsByTagName("td")[2];
-
-      incomeCell.innerHTML = "$" + incomeTotal;
-      expenseCell.innerHTML = "$" + expenseTotal;
-      balanceCell.innerHTML = "$" + balance;
-    }
-    // Switch code
-  </script>
+</script>
 </body>
 </html>
