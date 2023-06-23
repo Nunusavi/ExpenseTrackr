@@ -5,7 +5,7 @@ Introduction:
 
 Project Overview:
 
-2.1 Project Objective:
+ Project Objective:
 
 - The objective of ExpenseTracker is to provide individuals and households with a reliable tool for effectively tracking and managing their expenses. It aims to promote financial awareness and assist users in making informed decisions about their spending habits.
 

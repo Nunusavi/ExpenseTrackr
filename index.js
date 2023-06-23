@@ -4,6 +4,11 @@ function addExpense(event) {
     var expenseName = document.getElementById("expenseName").value;
     var expenseAmount = document.getElementById("expenseAmount").value;
     var expenseDate = document.getElementById("expenseDate").value;
+    // Check if all the form fields are filled out
+    if (expenseName == "" || expenseAmount == "" || expenseDate == "") {
+      alert("Please fill out all the fields");
+      return;
+    }
 
     // Create a new row in the expense table
     var expenseTable = document.getElementById("expenseTable").getElementsByTagName("tbody")[0];
@@ -18,28 +23,32 @@ function addExpense(event) {
 
     // Update the report table
     updateReportTable();
+    document.getElementById("expenseName").value = "";
   }
 
   // Function to add an income
   function addIncome(event) {
     event.preventDefault(); // Prevent form submission
     var incomeName = document.getElementById("incomeName").value;
-    var incomeAmount = document.getElaementById("incomeAmount").value;
+    var incomeAmount = document.getElementById("incomeAmount").value;
     var incomeDate = document.getElementById("incomeDate").value;
-
+    // check if all the form fields are filled out
+    if (incomeName == "" || incomeAmount == "" || incomeDate == "") {
+      alert("Please fill out all the fields");
+      return;
+    }
     // Create a new row in the income table
     var incomeTable = document.getElementById("incomeTable").getElementsByTagName("tbody")[0];
     var newRow = incomeTable.insertRow();
     var nameCell = newRow.insertCell(0);
     var amountCell = newRow.insertCell(1);
     var dateCell = newRow.insertCell(2);
-
     nameCell.innerHTML = incomeName;
     amountCell.innerHTML = "$" + incomeAmount;
     dateCell.innerHTML = incomeDate;
-
     // Update the report table
     updateReportTable();
+    document.getElementById("incomeName").value = "";
   }
 
   // Function to update the report table
@@ -53,7 +62,9 @@ function addExpense(event) {
     for (var i = 0; i < incomeRows.length; i++) {
       var amountCell = incomeRows[i].getElementsByTagName("td")[1];
       var amount = parseFloat(amountCell.innerHTML.substring(1));
-      incomeTotal += amount;
+      if (!isNaN(amount)) {
+        incomeTotal += amount;
+      }
     }
 
     // Calculate the total expense
@@ -62,7 +73,9 @@ function addExpense(event) {
     for (var i = 0; i < expenseRows.length; i++) {
       var amountCell = expenseRows[i].getElementsByTagName("td")[1];
       var amount = parseFloat(amountCell.innerHTML.substring(1));
-      expenseTotal += amount;
+      if (!isNaN(amount)) {
+        expenseTotal += amount;
+      }
     }
 
     // Calculate the balance
@@ -79,9 +92,13 @@ function addExpense(event) {
     expenseCell.innerHTML = "$" + expenseTotal;
     balanceCell.innerHTML = "$" + balance;
   }
+
+
+
+
   // make a chart in the chart canvas
-  var ctx = document.getElementById('expenseChart').getContext('2d');
-  var myChart = new Chart(ctx, {
+  var chart = document.getElementById('expenseChart').getContext('2d');
+  var myChart = new Chart(chart, {
     type: 'bar',
     data: {
       labels: ['Food'],
@@ -126,8 +143,8 @@ function addExpense(event) {
     }
   });
   // make a income chart based on whats in the table in the chart canvas
-  var ctx = document.getElementById('incomeChart').getContext('2d');
-  var myChart = new Chart(ctx, {
+  var chart = document.getElementById('incomeChart').getContext('2d');
+  var myChart = new Chart(chart, {
     type: 'bar',
     data: {
       labels: ['Salary',],
