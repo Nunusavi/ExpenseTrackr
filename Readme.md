@@ -16,9 +16,8 @@ ExpenseTracker targets users of varying financial expertise, from beginners seek
 Key Features:
 - Expense tracking with input fields for amount, date, category, and description.
 - Visualization of expense data through charts, graphs, and tables.
-- Filtering and sorting options for detailed expense analysis.
-- Budget setting for different expense categories and monitoring against set limits.
-- Data export functionality for generating reports or further analysis.*
+- Filtering and sorting options via date for detailed expense analysis.
 
 
-                *Future update 
+
+              

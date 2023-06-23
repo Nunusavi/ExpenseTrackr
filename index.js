@@ -20,10 +20,12 @@ function addExpense(event) {
     nameCell.innerHTML = expenseName;
     amountCell.innerHTML = "$" + expenseAmount;
     dateCell.innerHTML = expenseDate;
-
+    
     // Update the report table
     updateReportTable();
     document.getElementById("expenseName").value = "";
+    document.getElementById("expenseAmount").value = "";
+    document.getElementById("expenseDate").value = "";
   }
 
   // Function to add an income
@@ -49,6 +51,8 @@ function addExpense(event) {
     // Update the report table
     updateReportTable();
     document.getElementById("incomeName").value = "";
+    document.getElementById("incomeAmount").value = "";
+    document.getElementById("incomeDate").value = "";
   }
 
   // Function to update the report table
